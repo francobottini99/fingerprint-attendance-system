@@ -2,6 +2,9 @@
 
 Este programa implementa un sistema de gestión de asistencia para instituciones educativas utilizando un lector de huellas dactilares. El sistema consta de dos componentes principales: el hardware que se encarga de la lectura de huellas y un software de gestión para PC que permite administrar y supervisar la asistencia de los alumnos.
 
+### Autores:
+- **Bottini, Franco Nicolas**
+
 ## Lector de Huellas Dactilares
 
 El lector de huellas dactilares es el componente esencial del sistema. Utiliza tecnología biométrica para capturar y procesar las huellas dactilares de los alumnos de forma segura. Este dispositivo compacto y fácil de usar garantiza la precisión en la identificación de cada individuo, eliminando la posibilidad de registro de asistencias incorrectas. El microcontrolador Arduino actúa como el cerebro del sistema. Se encarga de gestionar la comunicación con el lector de huellas, almacenar las huellas dactilares de los alumnos y manejar la conexión a la red. Para garantizar la conectividad del sistema, se integra un módulo Ethernet que permite la comunicación con el servidor central. Esto posibilita la transferencia segura de datos, como registros de asistencia y actualizaciones de información de huellas dactilares.
