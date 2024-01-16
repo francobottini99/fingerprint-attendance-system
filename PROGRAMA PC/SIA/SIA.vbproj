@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFBA5F3D-4EE1-45B0-A78F-00002E8C3652}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SIA.My.MyApplication</StartupObject>
+    <RootNamespace>SIA</RootNamespace>
+    <AssemblyName>SIA</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SIA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SIA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 12.0\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Arduino.vb" />
+    <Compile Include="Consultas\frmConsAsistencias.Designer.vb">
+      <DependentUpon>frmConsAsistencias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\frmConsAsistencias.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Altas\Auxiliares\frmAyudaAltasAlumnos.Designer.vb">
+      <DependentUpon>frmAyudaAltasAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Altas\Auxiliares\frmAyudaAltasAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmSistema.Designer.vb">
+      <DependentUpon>frmSistema.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmSistema.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmIngresoSIA.Designer.vb">
+      <DependentUpon>frmIngresoSIA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmIngresoSIA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Manejo\Auxiliares\frmListaLectores.Designer.vb">
+      <DependentUpon>frmListaLectores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Manejo\Auxiliares\frmListaLectores.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Manejo\frmManejoAsistenciaManual.Designer.vb">
+      <DependentUpon>frmManejoAsistenciaManual.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Manejo\frmManejoAsistenciaManual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Manejo\frmManejoHuellas.Designer.vb">
+      <DependentUpon>frmManejoHuellas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Manejo\frmManejoHuellas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Activar.vb" />
+    <Compile Include="Clases\GrabaDatos.vb" />
+    <Compile Include="Clases\Mostrar.vb" />
+    <Compile Include="Formularios\Altas\frmAltasAlumnos.Designer.vb">
+      <DependentUpon>frmAltasAlumnos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmAltasAlumnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmAltasCurso.Designer.vb">
+      <DependentUpon>frmAltasCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmAltasCurso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmAltasFeriados.Designer.vb">
+      <DependentUpon>frmAltasFeriados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmAltasFeriados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmAltasGrupo.Designer.vb">
+      <DependentUpon>frmAltasGrupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Altas\frmAltasGrupo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Manejo\frmManejoHorarios.Designer.vb">
+      <DependentUpon>frmManejoHorarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Manejo\frmManejoHorarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\cnnBD.vb" />
+    <Compile Include="Modulos\ImpExcel.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Consultas\frmConsAsistencias.resx">
+      <DependentUpon>frmConsAsistencias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Altas\Auxiliares\frmAyudaAltasAlumnos.resx">
+      <DependentUpon>frmAyudaAltasAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Altas\frmAltasAlumnos.resx">
+      <DependentUpon>frmAltasAlumnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Altas\frmAltasCurso.resx">
+      <DependentUpon>frmAltasCurso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Altas\frmAltasFeriados.resx">
+      <DependentUpon>frmAltasFeriados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Altas\frmAltasGrupo.resx">
+      <DependentUpon>frmAltasGrupo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Altas\frmSistema.resx">
+      <DependentUpon>frmSistema.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmIngresoSIA.resx">
+      <DependentUpon>frmIngresoSIA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Manejo\Auxiliares\frmListaLectores.resx">
+      <DependentUpon>frmListaLectores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Manejo\frmManejoAsistenciaManual.resx">
+      <DependentUpon>frmManejoAsistenciaManual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Manejo\frmManejoHorarios.resx">
+      <DependentUpon>frmManejoHorarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Manejo\frmManejoHuellas.resx">
+      <DependentUpon>frmManejoHuellas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPlanillaDeAlumnosSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Panel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPlanillaDeAlumnosNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConsultasSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConsultasNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSalirSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSalirNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoDEF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panelito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panelito2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-azul-blue-cuadros-fotorecurso.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SIAT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSalirNo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSalirSi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoSi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoNo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConsultasSi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConsultasNo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cartel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cartelito.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CartelitoT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCursoSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCursoNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasGrupoSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasGrupoNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasAlumnosSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasAlumnosNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasHorariosSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasHorariosNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnVolverSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnVolverNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasFeriadoSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAltasFeriadoNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnNuevoSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnNuevoNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCancelarSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCancelarNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGuardarSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGuardarNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnModificarSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnModificarNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEliminarSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEliminarNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoHorariosSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoHorariosNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoAsignarHuellasSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoAsignarHuellasNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoAsistenciaSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoAsistenciaNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoRetiroAnticipadoSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoRetiroAnticipadoNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoMovAlumnosSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnManejoMovAlumnosNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConsultarAsistenciaSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConsultarAsistenciaNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAyudaNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAyudaSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AyudaExcel 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AyudaExcel 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSistemaSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSistemaNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCargarHuellaSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCargarHuellaNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HuellaLibre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HuellaLibreGris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoHuellaOk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoHuellaNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIngresarSi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIngresarNo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImportarExcelSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImportarExcelNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAgregarSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAgregarNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAgregarAlumnosSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAgregarAlumnosNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnUsuariosNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnUsuariosSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCicloLectivoSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCicloLectivoNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLectoresSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLectoresNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnToleranciaNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConfigurarLectoresNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConfigurarLectoresSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnToleranciaSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConfigurarLectorSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnConfigurarLectorNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIPServidorSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnIPServidorNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSeleccionarLectorNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSeleccionarLectorSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnFiltrarSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnFiltrarNo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImprimirSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnImprimirNo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
