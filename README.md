@@ -1,66 +1,66 @@
-# Sistema de control de asistencia por huella dactilar
+# Fingerprint Attendance Control System
 
-Este programa implementa un sistema de gestión de asistencia para instituciones educativas utilizando un lector de huellas dactilares. El sistema consta de dos componentes principales: el hardware que se encarga de la lectura de huellas y un software de gestión para PC que permite administrar y supervisar la asistencia de los alumnos.
+This program implements an attendance management system for educational institutions using a fingerprint reader. The system consists of two main components: the hardware responsible for fingerprint reading and PC-based management software that allows administrators to manage and supervise student attendance.
 
-### Autores:
+### Authors:
 - **Bottini, Franco Nicolas**
 
-## Lector de Huellas Dactilares
+## Fingerprint Reader
 
-El lector de huellas dactilares es el componente esencial del sistema. Utiliza tecnología biométrica para capturar y procesar las huellas dactilares de los alumnos de forma segura. Este dispositivo compacto y fácil de usar garantiza la precisión en la identificación de cada individuo, eliminando la posibilidad de registro de asistencias incorrectas. El microcontrolador Arduino actúa como el cerebro del sistema. Se encarga de gestionar la comunicación con el lector de huellas, almacenar las huellas dactilares de los alumnos y manejar la conexión a la red. Para garantizar la conectividad del sistema, se integra un módulo Ethernet que permite la comunicación con el servidor central. Esto posibilita la transferencia segura de datos, como registros de asistencia y actualizaciones de información de huellas dactilares.
+The fingerprint reader is the essential component of the system. It uses biometric technology to capture and process students' fingerprints securely. This compact and easy-to-use device ensures accuracy in identifying each individual, eliminating the possibility of incorrect attendance records. The Arduino microcontroller acts as the brain of the system. It manages communication with the fingerprint reader, stores students' fingerprints, and handles network connectivity. To ensure system connectivity, an Ethernet module is integrated, allowing communication with the central server. This enables secure data transfer, such as attendance logs and fingerprint information updates.
 
-### Funcionalidades Principales
+### Main Features
 
-#### Registro de Huellas
+#### Fingerprint Registration
 
-El sistema ofrece un proceso de registro de huellas dactilares rápido y seguro durante la configuración inicial. La interfaz intuitiva guía a los administradores a través de este proceso, asegurando la inclusión precisa de cada estudiante en la base de datos.
+The system offers a fast and secure fingerprint registration process during the initial setup. The intuitive interface guides administrators through this process, ensuring the accurate inclusion of each student in the database.
   
-#### Asistencia Automática
+#### Automatic Attendance
 
-Con solo colocar el dedo en el lector, el sistema realiza un seguimiento automático de la asistencia. La respuesta prácticamente instantánea del lector agiliza el proceso, brindando eficiencia en la toma de asistencia diaria.
+By simply placing a finger on the reader, the system automatically tracks attendance. The almost instantaneous response of the reader speeds up the process, providing efficiency in daily attendance recording.
 
-#### Sincronización Automática
+#### Automatic Synchronization
 
-Las actualizaciones de la base de datos se realizan de forma automática mediante sincronizaciones regulares con el servidor central. Esta función garantiza que cualquier cambio en la información del estudiante se refleje de inmediato en todos los terminales del sistema.
+Database updates are automatically performed through regular synchronizations with the central server. This feature ensures that any change in student information is immediately reflected across all system terminals.
 
-#### Gestión de Asistencia
+#### Attendance Management
 
-El software de gestión para PC proporciona una interfaz atractiva y fácil de usar. Facilita la administración eficiente de la asistencia, permitiendo a los usuarios generar informes detallados y estadísticas para un análisis profundo.
+The PC management software provides an attractive and easy-to-use interface. It facilitates the efficient management of attendance, allowing users to generate detailed reports and statistics for in-depth analysis.
 
-## Software de Gestión
+## Management Software
 
-El componente de software del Sistema de Gestión de Asistencia con Lector de Huellas Dactilares ofrece una interfaz de usuario amigable y completa para administrar de manera integral todos los aspectos del sistema. Diseñado con un enfoque en la facilidad de uso y la eficiencia, permite a diversos usuarios, como administradores y maestros, llevar a cabo una variedad de operaciones con facilidad.
+The software component of the Fingerprint Attendance Management System provides a user-friendly and comprehensive interface to fully manage all aspects of the system. Designed with a focus on ease of use and efficiency, it allows various users, such as administrators and teachers, to carry out a variety of tasks with ease.
 
-### Funcionalidades Principales
+### Main Features
 
-#### Configuración del Terminal
+#### Terminal Configuration
 
-El software simplifica la configuración inicial del terminal, permitiendo a los administradores asignar nombres, configurar direcciones IP y otros parámetros de red de manera sencilla. La interfaz gráfica intuitiva guía a los usuarios a través de este proceso, asegurando una configuración sin complicaciones.
+The software simplifies the initial terminal setup, allowing administrators to easily assign names, configure IP addresses, and other network parameters. The intuitive graphical interface guides users through this process, ensuring a hassle-free configuration.
 
-#### Visualización de Asistencia
+#### Attendance Visualization
 
-Ofrece una interfaz gráfica interactiva que permite a los administradores y maestros visualizar la asistencia de los alumnos en tiempo real. Los gráficos intuitivos y los colores representativos proporcionan una visión instantánea del estado de asistencia, facilitando la toma de decisiones. Además, el sistema permite acceder a historiales detallados de asistencia para un seguimiento exhaustivo.
+It offers an interactive graphical interface that allows administrators and teachers to view student attendance in real time. Intuitive graphs and representative colors provide an instant view of attendance status, facilitating decision-making. Additionally, the system allows access to detailed attendance histories for thorough monitoring.
 
-#### Actualización de Datos
+#### Data Update
 
-El sistema gestiona la actualización automática de la información del servidor central. Esto garantiza la coherencia y confiabilidad de la base de datos, asegurando que cualquier cambio en la información del estudiante se refleje de inmediato en todos los terminales del sistema.
+The system manages automatic updates of information to the central server. This ensures the consistency and reliability of the database, ensuring that any change in student information is immediately reflected across all system terminals.
 
-#### Gestión de Horarios
+#### Schedule Management
 
-El software incluye una funcionalidad que permite la el registro de horarios. Los administradores pueden establecer y ajustar fácilmente los horarios de clases, actividades extracurriculares y otros eventos relacionados con la asistencia. Ademas, se permite la generación de horarios exepcionales eventos especiales (ausencia de un porfesor) y permite la asignación de feriados y asuetos. Estas características contribuyen a una gestión eficiente del tiempo y recursos en la institución educativa.
+The software includes functionality for registering schedules. Administrators can easily set and adjust class schedules, extracurricular activities, and other events related to attendance. Additionally, it allows the generation of special schedules for exceptional events (e.g., teacher absence) and the assignment of holidays and breaks. These features contribute to efficient time and resource management in the educational institution.
 
-#### Alta de Alumnos
+#### Student Enrollment
 
-Facilita el proceso de alta de alumnos en la base de datos, permitiendo a los administradores agregar nuevos estudiantes de manera rápida y precisa. La interfaz de alta de alumnos es intuitiva, solicitando la información esencial para su inclusión en el sistema.
+It facilitates the process of enrolling students in the database, allowing administrators to quickly and accurately add new students. The student enrollment interface is intuitive, asking for essential information for their inclusion in the system.
 
-#### Gestión de Cursos y Grupos
+#### Course and Group Management
 
-El sistema permite a los administradores gestionar los cursos y grupos de la institución educativa. Se pueden agregar nuevos cursos y subdividirlos en grupos con facilidad. Lo que permite una segmentación eficiente de los horarios y la asistencia.
+The system allows administrators to manage courses and groups in the educational institution. New courses can be added and subdivided into groups easily. This allows efficient segmentation of schedules and attendance.
 
-#### Gestión de Usuarios
+#### User Management
 
-El sistema permite a los administradores gestionar los usuarios del sistema, incluidos los maestros y otros administradores. La interfaz de gestión de usuarios es fácil de usar, permitiendo a los administradores agregar, editar y eliminar usuarios con facilidad.
+The system allows administrators to manage system users, including teachers and other administrators. The user management interface is easy to use, enabling administrators to add, edit, and remove users effortlessly.
 
 ---
 
-Este Sistema de Gestión de Asistencia con Lector de Huellas Dactilares representa una solución completa y eficiente para las instituciones educativas, mejorando la precisión y eficacia en el seguimiento de la asistencia y simplificando las tareas administrativas asociadas.
+This Fingerprint Attendance Management System represents a complete and efficient solution for educational institutions, improving the accuracy and effectiveness of attendance tracking and simplifying the administrative tasks associated with it.
